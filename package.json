@@ -1,5 +1,5 @@
 {
-  "name": "nextjs-form-validation-example",
+  "name": "NextJS-Form",
   "version": "1.0.0",
   "scripts": {
     "dev": "next",
@@ -13,8 +13,9 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.33.1",
+    "react-router-dom": "^6.3.0",
     "yup": "^0.32.11"
   },
   "keywords": [],
-  "description": "https://jasonwatmore.com/post/2021/09/03/next-js-form-validation-example-with-react-hook-form"
+  "description": "NextJS - Form"
 }

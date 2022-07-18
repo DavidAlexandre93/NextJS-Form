@@ -2,10 +2,16 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 
-export default Home;
+export default Form;
 
-function Home() {
-    // form validation rules 
+function Form() {
+
+    const formOptions = { resolver: yupResolver(validationSchema) };
+    // get functions to build form with useForm() hook
+    const { register, handleSubmit, reset, formState } = useForm(formOptions);
+    const { errors } = formState;
+
+    
     const validationSchema = Yup.object().shape({
         title: Yup.string()
             .required('Title is required'),
@@ -28,13 +34,9 @@ function Home() {
         acceptTerms: Yup.bool()
             .oneOf([true], 'Accept Ts & Cs is required')
     });
-    const formOptions = { resolver: yupResolver(validationSchema) };
+   
 
-    // get functions to build form with useForm() hook
-    const { register, handleSubmit, reset, formState } = useForm(formOptions);
-    const { errors } = formState;
-
-    function onSubmit(data) {
+    const onSubmit = (data) => {
         // display form data on success
         alert('SUCCESS!! :-)\n\n' + JSON.stringify(data, null, 4));
         return false;

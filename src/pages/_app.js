@@ -1,10 +1,14 @@
 import Head from 'next/head';
 
+import { BrowserRouter as Router, NavLink, Switch, Route } from 'react-router-dom';
+
+//import Form from './components/Form/Form'
+
 export default App;
 
 function App({ Component, pageProps }) {
     return (
-        <>
+        <Router>
             <Head>
                 <title>Next.js - Form Validation Example</title>
 
@@ -14,15 +18,25 @@ function App({ Component, pageProps }) {
 
             <Component {...pageProps} />
 
-            {/* credits */}
+            
+
             <div className="text-center mt-4">
+            <Switch>
+            <Route path="/NextJSAPP" exact>
                 <p>
-                    <a href="" target="_top">Next.js - Form Validation Example with React Hook Form</a>
+                    <a href="" target="_top">Nextjs - Form test application</a>
                 </p>
+            </Route>
+
+            <Route path="/NextJSForm" exact>
                 <p>
-                    <a href="" target="_top">React Form</a>
+                    <a href="" target="_top">NextJS Form</a>
                 </p>
+            </Route>
+            </Switch>
             </div>
-        </>
+
+            
+        </Router>
     );
 }
