@@ -17,10 +17,10 @@ function App({ Component, pageProps }) {
             {/* credits */}
             <div className="text-center mt-4">
                 <p>
-                    <a href="https://jasonwatmore.com/post/2021/09/03/next-js-form-validation-example-with-react-hook-form" target="_top">Next.js - Form Validation Example with React Hook Form</a>
+                    <a href="" target="_top">Next.js - Form Validation Example with React Hook Form</a>
                 </p>
                 <p>
-                    <a href="https://jasonwatmore.com" target="_top">JasonWatmore.com</a>
+                    <a href="" target="_top">React Form</a>
                 </p>
             </div>
         </>
