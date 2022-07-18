@@ -2,7 +2,6 @@ import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 
-export default Form;
 
 function Form() {
 
@@ -108,3 +107,6 @@ function Form() {
         </div>
     );
 }
+
+
+export default Form;
